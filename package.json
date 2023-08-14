@@ -10,8 +10,11 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "icy-metadata": "^0.1.2",
+    "radio-browser-api": "^6.0.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-player": "^2.12.0",
     "react-router-dom": "^6.15.0"
   },
   "devDependencies": {
