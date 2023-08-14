@@ -10,6 +10,7 @@ const Radio = () => {
   const [searchName, setSearchName] = useState('');
   const [searchCountry, setSearchCountry] = useState('');
   const [searchTag, setSearchTag] = useState('');
+  const [filter, setFilter] = useState('');
 
   const handleNameSearch = (e) => {
     let value = e.target.value;
@@ -30,7 +31,12 @@ const Radio = () => {
   };
 
   const handleLimit = () => {
-    setLimit(limit + 10);
+    setLimit(limit + 20);
+  };
+
+  const handleFilterChange = (e) => {
+    let value = e.target.value;
+    setFilter(value);
   };
 
   useEffect(() => {
@@ -48,9 +54,19 @@ const Radio = () => {
             station.favicon && station.bitrate !== 0 && station.img !== ''
         );
 
-        let finalRadioStations = filteredStations.sort((a, b) => {
-          return b.votes - a.votes;
-        });
+        let finalRadioStations;
+
+        if (filter === '') {
+          finalRadioStations = [...filteredStations]; // Copy the array
+        } else if (filter === 'popular first') {
+          finalRadioStations = [...filteredStations].sort((a, b) => {
+            return b.votes - a.votes;
+          });
+        } else {
+          finalRadioStations = [...filteredStations].sort((a, b) => {
+            return a.votes - b.votes;
+          });
+        }
 
         const transformedStations = finalRadioStations.map((station) => ({
           name: station.name,
@@ -70,7 +86,7 @@ const Radio = () => {
     };
 
     getStations();
-  }, [limit, searchName, searchCountry, searchTag]);
+  }, [limit, searchName, searchCountry, searchTag, filter]);
 
   return (
     <div className="radio">
@@ -96,6 +112,13 @@ const Radio = () => {
             placeholder="Search by Genre"
             onChange={handleGenreSearch}
           />
+        </div>
+        <div className="search-input">
+          <select className="filter-dropdown" onChange={handleFilterChange}>
+            <option value="">Filter by rating</option>
+            <option value="popular first">Popular first</option>
+            <option value="popular last">Popular last</option>
+          </select>
         </div>
       </div>
       <div className="radio-wrapper">
