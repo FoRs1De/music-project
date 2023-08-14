@@ -1,9 +1,10 @@
-/* Radio.css */
 body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
+
+/* Radio.css */
 
 .radio {
   padding-bottom: 20px;
@@ -85,6 +86,7 @@ nav {
   background-color: #333;
   padding: 10px 0;
   text-align: center;
+  z-index: 500;
 }
 
 /* Style the navigation links */
@@ -142,3 +144,4 @@ footer p:hover {
 .content {
   flex-grow: 1;
 }
+
