@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { RadioBrowserApi } from 'radio-browser-api';
 import RadioStation from './RadioStation';
 
@@ -6,7 +6,7 @@ const Radio = () => {
   const api = new RadioBrowserApi('My Radio App');
   const [radioStations, setRadioStations] = useState([]);
   const [loading, setLoading] = useState(true);
-  const [limit, setLimit] = useState(10);
+  const [limit, setLimit] = useState(20);
   const [searchName, setSearchName] = useState('');
   const [searchCountry, setSearchCountry] = useState('');
   const [searchTag, setSearchTag] = useState('');
@@ -43,18 +43,22 @@ const Radio = () => {
           limit: limit,
         });
 
-        // Filter out stations without a favicon (img)
         const filteredStations = stations.filter(
-          (station) => station.favicon && station.bitrate > 0
+          (station) =>
+            station.favicon && station.bitrate !== 0 && station.img !== ''
         );
 
-        // Transform the data
-        const transformedStations = filteredStations.map((station) => ({
+        let finalRadioStations = filteredStations.sort((a, b) => {
+          return b.votes - a.votes;
+        });
+
+        const transformedStations = finalRadioStations.map((station) => ({
           name: station.name,
           description: station.country,
           bitRate: station.bitrate,
           img: station.favicon,
           streamUrl: station.url,
+          votes: station.votes,
         }));
 
         setRadioStations(transformedStations);
@@ -106,6 +110,7 @@ const Radio = () => {
               img={station.img}
               streamUrl={station.streamUrl}
               bitRate={station.bitRate}
+              votes={station.votes}
             />
           ))
         )}

@@ -1,7 +1,14 @@
 import ReactPlayer from 'react-player';
 import { useState } from 'react';
 
-const RadioStation = ({ name, streamUrl, description, img, bitRate }) => {
+const RadioStation = ({
+  name,
+  streamUrl,
+  description,
+  img,
+  bitRate,
+  votes,
+}) => {
   const [isPlaying, setIsPlaying] = useState(false);
   const [volume, setVolume] = useState(0.5);
 
@@ -17,12 +24,12 @@ const RadioStation = ({ name, streamUrl, description, img, bitRate }) => {
     <div className="radio-station">
       <h3>{name}</h3>
       <p>Country: {description}</p>
-      <p>Bitrate: {bitRate}</p>
+      <p>Bitrate: {bitRate}</p> <p>Votes: {votes}</p>
       <img src={img} width="400px" height="400px" />
       <ReactPlayer
         url={streamUrl}
         playing={isPlaying}
-        volume={volume}
+        volume={+volume}
         width="100%"
         height="20px"
       />

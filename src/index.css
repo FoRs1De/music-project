@@ -1,12 +1,30 @@
 .song-player {
-  width: 100%;
+  width: 50%;
   height: 90vh;
-  margin-top: -50px;
+  margin-top: -20px;
 }
 
 .song-player-container {
   height: 100vh;
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
+}
+
+.play-lists {
+  display: flex;
+  flex-direction: column;
+}
+.play-lists button {
+  background-color: #333333;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  padding: 10px;
+  margin-bottom: 50px;
+  border-radius: 50px;
+}
+
+.play-lists button:hover {
+  color: #f39c12;
 }
