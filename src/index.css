@@ -1,0 +1,11 @@
+.song-player {
+  width: 300px;
+  height: 600px;
+}
+
+.song-player-container {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
