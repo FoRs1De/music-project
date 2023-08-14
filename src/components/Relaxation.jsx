@@ -6,7 +6,7 @@ const Relaxation = () => {
   const vimeoRef = useRef(null);
   const [play, setPlay] = useState(false);
 
-  const token = 'BQBLGNhTMfgMmSELbcw5HhsJnDzf4X6K0enQpd1pOurEfU2Zg08rfyX13p8B-YQyU9eGDBJuD-338b989mYG1qm3AVxAVllNPYYhEHPiC0rEX8_CGn2-hUIvfKSeTXco0Om-bDk_nNKL6PttRfFXC7cqtKNCBw2KBPXPfdj0jsdR5gcJwq13el9dtDd4vubUusYGPIXQKfo';
+  const token = 'BQBhO-FWl9h4YIfYkWz9MptJmZTl1e7SU1pYg-dm-AEbhHAs95UXwDfupBfJ_q5cc1JmUmGYNgVAksy0cR38yWC-hzFydLe7_P5PEPrrXLW7G0-FUxLHJwkiCUIIGrqJrMLyai4VvY9i2RNqTvwHj1KDq4qS8fn_XekM64CiEHzvd-QWQo3ekWRETzgIT2kE_7GzKGCUZ3M';
   const trackUri = 'spotify:track:04boE4u1AupbrGlI62WvoO';
 
   useEffect(() => {
