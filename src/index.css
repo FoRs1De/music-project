@@ -1,12 +1,47 @@
 .song-player {
-  width: 100%;
+  width: 50%;
   height: 90vh;
-  margin-top: -50px;
+  margin-top: -20px;
 }
 
 .song-player-container {
   height: 100vh;
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
+
 }
+
+.play-lists {
+  display: flex;
+  flex-direction: column;
+}
+.play-lists button {
+  background-color: #333333;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  padding: 10px;
+  margin-bottom: 50px;
+  border-radius: 50px;
+}
+
+.play-lists button:hover {
+  color: #f39c12;
+}
+
+#root > div > div > div > div > div {
+  position: relative;
+  border-radius: 40px;
+  padding: 10px 20px;
+  margin-top: 100px;
+  box-sizing: border-box;
+  overflow: visible; /* change this to 'visible' or 'auto' */
+  width: 500px;
+  backdrop-filter: blur(20px);
+  background-blend-mode: overlay;
+  background-color: rgb(255, 255, 255);
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.269),
+    inset 0 0 0 2px rgba(0, 0, 0, 0);
+}
+
