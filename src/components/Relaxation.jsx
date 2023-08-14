@@ -1,6 +1,6 @@
 import { useRef, useState, useEffect } from 'react';
 import SpotifyPlayer from 'react-spotify-web-playback';
-import relaxation from '../../src/relaxation.css';
+import '../../src/relaxation.css';
 
 const Relaxation = () => {
   const vimeoRef = useRef(null);
