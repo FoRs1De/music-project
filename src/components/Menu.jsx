@@ -3,18 +3,10 @@ import { NavLink } from 'react-router-dom';
 const Menu = () => {
   return (
     <nav>
-      <NavLink to="/" activeClassName="active">
-        Home
-      </NavLink>
-      <NavLink to="/music" activeClassName="active">
-        Music
-      </NavLink>
-      <NavLink to="/relaxation" activeClassName="active">
-        Relaxation
-      </NavLink>
-      <NavLink to="/radio" activeClassName="active">
-        Radio
-      </NavLink>
+      <NavLink to="/">Home</NavLink>
+      <NavLink to="/music">Music</NavLink>
+      <NavLink to="/relaxation">Relaxation</NavLink>
+      <NavLink to="/radio">Radio</NavLink>
     </nav>
   );
 };
