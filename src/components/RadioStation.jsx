@@ -1,6 +1,5 @@
 import ReactPlayer from 'react-player';
 import { useState } from 'react';
-import { RadioBrowserApi } from 'radio-browser-api';
 
 const RadioStation = ({ name, streamUrl, description, img, bitRate }) => {
   const [isPlaying, setIsPlaying] = useState(false);
@@ -14,14 +13,12 @@ const RadioStation = ({ name, streamUrl, description, img, bitRate }) => {
     setVolume(value);
   };
 
-  const api = new RadioBrowserApi('My Radio App');
-
   return (
     <div className="radio-station">
       <h3>{name}</h3>
       <p>Country: {description}</p>
       <p>Bitrate: {bitRate}</p>
-      <img src={img} width="400px" />
+      <img src={img} width="400px" height="400px" />
       <ReactPlayer
         url={streamUrl}
         playing={isPlaying}
