@@ -1,12 +1,20 @@
-import { NavLink } from 'react-router-dom';
+import { Link } from "react-router-dom";
 const Menu = () => {
   return (
     <>
       <nav>
-        <NavLink to="/">Home</NavLink>
-        <NavLink to="/music">Music</NavLink>
-        <NavLink to="/relaxation">Relaxation</NavLink>
-        <NavLink to="/radio">Radio</NavLink>
+        <Link className="link" to="/">
+          Home
+        </Link>
+        <Link className="link" to="/music">
+          Music
+        </Link>
+        <Link className="link" to="/relaxation">
+          Relaxation
+        </Link>
+        <Link className="link" to="/radio">
+          Radio
+        </Link>
       </nav>
     </>
   );

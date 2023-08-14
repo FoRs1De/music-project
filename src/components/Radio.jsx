@@ -1,15 +1,15 @@
-import React, { useState, useEffect } from 'react';
-import { RadioBrowserApi } from 'radio-browser-api';
-import RadioStation from './RadioStation';
+import { useState, useEffect } from "react";
+import { RadioBrowserApi } from "radio-browser-api";
+import RadioStation from "./RadioStation";
 
 const Radio = () => {
-  const api = new RadioBrowserApi('My Radio App');
+  const api = new RadioBrowserApi("My Radio App");
   const [radioStations, setRadioStations] = useState([]);
   const [loading, setLoading] = useState(true);
   const [limit, setLimit] = useState(10);
-  const [searchName, setSearchName] = useState('');
-  const [searchCountry, setSearchCountry] = useState('');
-  const [searchTag, setSearchTag] = useState('');
+  const [searchName, setSearchName] = useState("");
+  const [searchCountry, setSearchCountry] = useState("");
+  const [searchTag, setSearchTag] = useState("");
 
   const handleNameSearch = (e) => {
     let value = e.target.value;
@@ -59,7 +59,7 @@ const Radio = () => {
 
         setRadioStations(transformedStations);
       } catch (error) {
-        console.error('Error fetching radio stations:', error);
+        console.error("Error fetching radio stations:", error);
       } finally {
         setLoading(false);
       }
