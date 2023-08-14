@@ -1,4 +1,9 @@
 /* Radio.css */
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
 .radio {
   padding-bottom: 20px;
@@ -99,4 +104,41 @@ nav a:hover {
 
 .active {
   color: #f39c12;
+}
+
+/* Footer.css */
+
+/* Style the footer container */
+footer {
+  background-color: #333;
+  color: #fff;
+  padding: 10px 0;
+  text-align: center;
+}
+
+/* Apply styles to the footer text */
+footer p {
+  font-size: 14px;
+  margin: 0;
+}
+
+/* Apply additional styles to make it stand out */
+footer p {
+  opacity: 0.7;
+  padding: 5px;
+}
+
+/* Hover effect */
+footer p:hover {
+  opacity: 1;
+}
+
+.main-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.content {
+  flex-grow: 1;
 }
