@@ -1,5 +1,9 @@
 /* Radio.css */
 
+.radio {
+  padding-bottom: 20px;
+}
+
 .radio-wrapper {
   display: flex;
   flex-direction: row;
@@ -67,4 +71,32 @@ input[type='range'] {
 /* Optional: Style the placeholder text */
 .search-input input::placeholder {
   color: #999;
+}
+
+/* Menu.css */
+
+/* Style the navigation container */
+nav {
+  background-color: #333;
+  padding: 10px 0;
+  text-align: center;
+}
+
+/* Style the navigation links */
+nav a {
+  display: inline-block;
+  margin: 0 15px;
+  color: #fff;
+  text-decoration: none;
+  font-size: 18px;
+  transition: color 0.3s;
+}
+
+/* Apply styles on hover */
+nav a:hover {
+  color: #f39c12;
+}
+
+.active {
+  color: #f39c12;
 }
