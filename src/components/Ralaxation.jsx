@@ -44,13 +44,14 @@ const Relaxation = () => {
       </div>
 
       {/* Vimeo Player */}
-      <iframe
-        ref={vimeoRef}
-        src="https://player.vimeo.com/video/93050095?loop=1&background=1"
-        style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%' }}
-        frameBorder="0"
-        allow="autoplay; fullscreen"
-      />
+<iframe
+  ref={vimeoRef}
+  src="https://player.vimeo.com/video/93050095?loop=1&background=1"
+  style={{ position: 'absolute', top: 35
+  , left: 0, width: '100%', height: '100%', zIndex: 800 }} /* set a lower z-index */
+  frameBorder="0"
+  allow="autoplay; fullscreen"
+/>
     </>
   );
 };
