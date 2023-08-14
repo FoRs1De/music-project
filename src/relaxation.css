@@ -1,0 +1,25 @@
+.vimeo-player {
+    position: absolute;
+    top: 29px;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 999;
+  }
+  
+  @media screen and (max-width: 767px) {
+    .vimeo-player {
+      top: 60px; /* Adjust this value based on your navbar height on mobile devices */
+    }
+  }
+
+  .spotify-player-container {
+        border-radius: 40px;
+        padding: 10px 20px;
+        margin-top: 100px;
+        box-sizing: border-box;
+        overflow: visible; /* change this to 'visible' or 'auto' */
+        backdrop-filter: blur(10px);
+        background-blend-mode: overlay;
+        background-color: rgba(255, 255, 255, 0.059);
+      }

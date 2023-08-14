@@ -4,7 +4,7 @@ import { Routes, Route } from 'react-router-dom';
 import MainLayOut from './components/MainLayout';
 import Home from './components/Home';
 import Music from './components/Music';
-import Relaxation from './components/Ralaxation';
+import Relaxation from './components/Relaxation';
 import Radio from './components/Radio';
 import NotFound from './components/NotFound';
 
